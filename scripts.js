@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         title.textContent = item.title;
 
         let description = document.createElement('p');
-        description.textContent = item.description;
+        description.innerText = item.description;
         description.style.display = 'none'; // Initially hide the description
 
         // Click event to toggle the description visibility
