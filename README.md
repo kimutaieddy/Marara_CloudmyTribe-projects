@@ -1,62 +1,29 @@
-# Welcome to CloudmyTribe Community Project Challenges! 🤝
+Your Cloud Resume: Host Your Static Website on AWS
+This project involves hosting a static resume website on AWS. The website is a resume written in HTML.
 
-## Introduction 👋
+Getting Started
+Step-by-Step Guide
+1. Review the Challenge Requirements
+Thoroughly read through the requirements of the challenge to understand the expectations and goals. The outcome of this step should be a clear understanding of the objectives and deliverables.
 
-Welcome to the CloudmyTribe Cloud Challenge projects! This initiative is designed to help you build a cloud-based products using AWS services. Whether you're just getting started with cloud technologies or looking to sharpen your skills, these projects offer a comprehensive, hands-on experience.
+2. Explore AWS Documentation
+Dive into AWS documentation to familiarize yourself with the services needed for this challenge. Focus on:
 
-## How to Get Started 
+Amazon S3 (for static website hosting)
+AWS CloudFront (for CDN)
+Route 53 (for DNS management)
+IAM (for access management) The outcome of this step should be knowledge of the services you'll be using, including best practices and configurations.
+3. Build Your Architecture Diagram
+Design an architecture diagram that outlines the structure of your static website hosting solution. Use tools like draw.io, Lucidchart, or any diagramming tool you're comfortable with. Include components like S3 bucket, CloudFront distribution, Route 53, and IAM roles/policies. The outcome of this step should be a comprehensive architecture diagram that visually represents the infrastructure.
 
-1. **Review the Challenge Requirements**
-   - Familiarize yourself with the Challenge Guide to understand the objectives and tasks.
-   
-2. **Prepare Your Tools**
-   - Ensure you have the necessary tools and accounts set up, including an AWS account, GitHub account, and a code editor.
+4. HTML
+Your resume needs to be written in HTML. Not a Word doc, not a PDF. You can find an example here.
 
-3. **Follow the Milestones**
-   - Follow the step-by-step milestones outlined in the guide to complete the project.
+Deployment
+This project is deployed using the AWS Console. Detailed deployment steps will be provided in the subsequent milestones.
 
-## General Guidelines 📓
+Contributing
+Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
 
-- **Stay Organized**: Keep your code and documentation well-organized. This will help you and others follow your progress.
-- **Ask for Help**: If you get stuck, don’t hesitate to ask for help. Use our Slack community and Google Classroom forums to connect with other participants.
-- **Share Your Progress**: Share your progress on social media with the hashtag #CloudmyTribeCloudChallenge(CCC). Inspire others and get feedback.
-- **Contribute**: We welcome contributions! Whether it's improving documentation, adding new features, or fixing bugs, your contributions are valuable.
-
-## How to Contribute
-
-1. **Fork the Repository**
-   - Fork this repository to your own GitHub account.
-
-2. **Create a Branch**
-   - Create a new branch for your feature or bug fix.
-   - `git checkout -b feature-name`
-
-3. **Make Changes**
-   - Implement your changes and commit them with clear, concise commit messages.
-   - `git commit -m "Description of changes"`
-
-4. **Push to GitHub**
-   - Push your changes to your forked repository.
-   - `git push origin feature-name`
-
-5. **Submit a Pull Request**
-   - Submit a pull request to the main repository. Provide a detailed description of your changes and why they should be merged.
-
-## Code of Conduct
-
-We are committed to providing a friendly, safe, and welcoming environment for all. Please read our [Code of Conduct]() to understand the standards we uphold.
-
-## Join the Community
-
-
-- **Social Media**: Follow us for updates and news ON:
--  [Twitter](https://x.com/CloudmyTribe?mx=2)
--  [LinkedIn](https://www.linkedin.com/company/102502849/admin/feed/posts/)
--  [Instagram](https://www.instagram.com/cloudmytribe/)
--  [Youtube](https://www.youtube.com/channel/UCm3b6uqc8VEmHEMTyq8GeUQ)
-
-We are excited to have you on board and can't wait to see what you'll build. Happy coding! 😃
-
----
-
-**CloudmyTribe Cloud Challenges**
+License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
