@@ -1,62 +1,60 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const timelineData = [
-        {
-            date: 'Apr 2023 – Aug 2023',
-            title: 'IT Systems Analyst',
-            description: 'Roles:\n• Provided technical assistance to faculty, staff, and students regarding hardware and software issues, troubleshooting problems promptly to minimize downtime.\n• Assisted in the maintenance and management of the school\'s network infrastructure, including troubleshooting network connectivity issues and ensuring reliable internet access for all users.\n• Supported the school\'s migration to the cloud by assisting in the setup, configuration, and management of AWS, helping to optimize performance and cost-efficiency.\n• Spearheaded the documentation and delivery of training materials, empowering team members to effectively utilize technology tools and applications.'
-        },
-        {
-            date: 'Jan 2023 – Apr 2023',
-            title: 'Information Communication Technology Officer',
-            description: 'Roles:\n• Managing and maintaining the organization\'s IT infrastructure, including hardware, software, and network systems.\n• Provided technical support to end-users, troubleshooting network issues, and resolving software-related problems.\n• Contributed to the integration of technology into conservation education initiatives, assisting in the development and deployment of interactive educational tools, multimedia resources, and virtual learning platforms to raise awareness about wildlife conservation among stakeholders and the public.\n• Assisted in implementing cybersecurity measures to protect critical wildlife conservation systems and data from cyber threats, including conducting vulnerability assessments and implementing security protocols.'
-        },
-    ];
+const timeline = document.getElementById('timeline');
 
-    const timeline = document.getElementById('timeline');
+// Function to format description as bullet points
+function formatDescription(description) {
+    // Split the description into individual roles
+    const roles = description.split('\n• ');
 
-    timelineData.forEach((item, index) => {
-        let entry = document.createElement('div');
-        entry.classList.add('timeline-entry');
-        entry.setAttribute('id', 'entry-' + index);
+    // Remove the initial 'Roles:' from the first item
+    roles[0] = roles[0].replace('Roles:\n', '');
 
-        let dot = document.createElement('div');
-        dot.classList.add('timeline-dot');
+    // Join roles with <br> for line breaks
+    return roles.join('<br>');
+}
 
-        let date = document.createElement('div');
-        date.textContent = item.date;
-        date.classList.add('timeline-date');
+const timelineData = [
+    {
+        date: 'Apr 2023 – Aug 2023',
+        title: 'IT Systems Analyst',
+        description: `Roles:\n• Provided technical assistance to faculty, staff, and students regarding hardware and software issues, troubleshooting problems promptly to minimize downtime.\n• Assisted in the maintenance and management of the school's network infrastructure, including troubleshooting network connectivity issues and ensuring reliable internet access for all users.\n• Supported the school's migration to the cloud by assisting in the setup, configuration, and management of AWS, helping to optimize performance and cost-efficiency.\n• Spearheaded the documentation and delivery of training materials, empowering team members to effectively utilize technology tools and applications.`
+    },
+    {
+        date: 'Jan 2023 – Apr 2023',
+        title: 'Information Communication Technology Officer',
+        description: `Roles:\n• Managing and maintaining the organization's IT infrastructure, including hardware, software, and network systems.\n• Provided technical support to end-users, troubleshooting network issues, and resolving software-related problems.\n• Contributed to the integration of technology into conservation education initiatives, assisting in the development and deployment of interactive educational tools, multimedia resources, and virtual learning platforms to raise awareness about wildlife conservation among stakeholders and the public.\n• Assisted in implementing cybersecurity measures to protect critical wildlife conservation systems and data from cyber threats, including conducting vulnerability assessments and implementing security protocols.`
+    }
+];
 
-        let content = document.createElement('div');
-        content.classList.add('timeline-content');
-        content.setAttribute('id', 'content-' + index);
+timelineData.forEach((item, index) => {
+    let entry = document.createElement('div');
+    entry.classList.add('timeline-entry');
+    entry.setAttribute('id', 'entry-' + index);
 
-        let title = document.createElement('h3');
-        title.textContent = item.title;
+    let dot = document.createElement('div');
+    dot.classList.add('timeline-dot');
 
-        let description = document.createElement('p');
-        description.innerText = item.description;
-        description.style.display = 'none'; // Initially hide the description
+    let date = document.createElement('div');
+    date.textContent = item.date;
+    date.classList.add('timeline-date');
 
-        // Click event to toggle the description visibility
-        entry.addEventListener('click', function() {
-            description.style.display = description.style.display === 'none' ? 'block' : 'none';
-        });
+    let content = document.createElement('div');
+    content.classList.add('timeline-content');
+    content.setAttribute('id', 'content-' + index);
 
-        // Add hover effect to highlight the entry
-        entry.addEventListener('mouseover', function() {
-            entry.style.backgroundColor = '#f0f0f0';
-        });
-        entry.addEventListener('mouseout', function() {
-            entry.style.backgroundColor = '';
-        });
+    let title = document.createElement('h3');
+    title.textContent = item.title;
+    content.appendChild(title); // Append the title inside the content div
 
-        content.appendChild(title);
-        content.appendChild(description);
+    // Create a new element for the description with bullet points
+    let description = document.createElement('p');
+    description.innerHTML = formatDescription(item.description);
+    content.appendChild(description);
 
-        entry.appendChild(dot);
-        entry.appendChild(date);
-        entry.appendChild(content);
+    // Append all elements to the entry
+    entry.appendChild(dot);
+    entry.appendChild(date);
+    entry.appendChild(content);
 
-        timeline.appendChild(entry);
-    });
+    // Append the entry to the timeline
+    timeline.appendChild(entry);
 });
