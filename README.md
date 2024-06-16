@@ -1,6 +1,8 @@
 # Building an Online Resume with AWS
 
 Welcome! we'll walk through the process of creating an online resume using AWS services. This project will demonstrate how to host a static website on S3, configure a custom domain with Route 53, and secure it with HTTPS using AWS Certificate Manager and CloudFront.
+#Architecture Diagram 
+![diagram-export-6-16-2024-11_39_01-AM](https://github.com/kimutaieddy/Marara_CloudmyTribe-projects/assets/131693884/60b27381-e82e-468b-85b4-c12867e8e342)
 
 ## Overview
 
